@@ -48,17 +48,16 @@ Flask_Framework_Tutorial/
 ```
 
 ## Tutorials
-1. [Hello World](examples/01-hello-world/) - Create your first Flask application
-2. [Templates](examples/02-templates/) - Working with HTML templates
-3. [Forms](examples/03-forms/) - Processing form submissions
-4. [Database](examples/04-database/) - Integrating SQLite and SQLAlchemy
-5. [User Authentication](examples/05-authentication/) - Implementing login functionality
+- Create your first Flask application
+- Working with HTML templates
+- Processing form submissions
+- Integrating SQLite and SQLAlchemy
+- Implementing login functionality
 
 Each tutorial includes:
 - Step-by-step instructions
 - Code examples
 - Explanations of key concepts
-- Practice exercises    
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
