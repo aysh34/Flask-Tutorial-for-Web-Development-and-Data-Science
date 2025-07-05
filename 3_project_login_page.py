@@ -1,6 +1,5 @@
 # let's create a basic login page
 """
-
 1. Show the login page
 2. Accept username & password from the user
 3. Store user info in session
