@@ -4,14 +4,66 @@
   <head>
     <meta charset="UTF-8" />
     <title>{% block title %}My Site{% endblock %}</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      header {
+        background-color: #4a76a8;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #333;
+        overflow: hidden;
+        padding: 0.5rem 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+      }
+
+      nav a:hover {
+        background-color: #555;
+        border-radius: 3px;
+      }
+
+      main {
+        padding: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
   </head>
+
   <body>
     <header>
       <h1>My Website Header</h1>
     </header>
 
     <nav>
-      <!-- Navigation bar -->
+      <a href="/">Home</a>
+      <a href="/about">About</a>
     </nav>
 
     <main>
