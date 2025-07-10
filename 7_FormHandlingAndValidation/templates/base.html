@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} My Feedback Site {% endblock %}</title>
+    <style>
+      body {
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+        margin: 0;
+        padding: 0;
+        color: #222;
+        min-height: 100vh;
+      }
+      header {
+        background: linear-gradient(90deg, #2d3e50 60%, #0077cc 100%);
+        color: #fff;
+        padding: 2rem 0 1rem 0;
+        text-align: center;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        box-shadow: 0 2px 8px rgba(45, 62, 80, 0.08);
+      }
+      nav {
+        background: #fff;
+        text-align: center;
+        padding: 0.5rem 0;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+        margin-bottom: 2rem;
+      }
+      nav a {
+        color: #0077cc;
+        text-decoration: none;
+        font-weight: 500;
+        margin: 0 1.5rem;
+        font-size: 1.1rem;
+        transition: color 0.2s;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 0.2rem;
+      }
+      nav a:hover {
+        color: #005fa3;
+        border-bottom: 2px solid #0077cc;
+      }
+      main {
+        max-width: 600px;
+        margin: 2.5rem auto;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0, 119, 204, 0.08);
+        padding: 2.5rem 2rem;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0077cc;
+        font-weight: 700;
+        margin-top: 0;
+      }
+      a {
+        color: #0077cc;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: #005fa3;
+        text-decoration: underline;
+      }
+      form {
+        margin-top: 2rem;
+      }
+      label {
+        font-weight: 500;
+        color: #2d3e50;
+        margin-bottom: 0.2rem;
+        display: block;
+      }
+      input,
+      textarea,
+      select {
+        font: inherit;
+        margin-top: 0.3rem;
+        margin-bottom: 1.2rem;
+        padding: 0.7rem;
+        border-radius: 6px;
+        border: 1.5px solid #b3c6e0;
+        width: 100%;
+        box-sizing: border-box;
+        background: #f6faff;
+        transition: border 0.2s;
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        border: 1.5px solid #0077cc;
+        outline: none;
+        background: #eaf6ff;
+      }
+      button {
+        background: linear-gradient(90deg, #0077cc 60%, #005fa3 100%);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 0.8rem 2.2rem;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0, 119, 204, 0.07);
+        transition: background 0.2s, box-shadow 0.2s;
+      }
+      button:hover {
+        background: linear-gradient(90deg, #005fa3 60%, #0077cc 100%);
+        box-shadow: 0 4px 16px rgba(0, 119, 204, 0.12);
+      }
+      .error {
+        color: #d8000c;
+        background: #ffeaea;
+        padding: 0.7rem 1rem;
+        border-radius: 6px;
+        margin-bottom: 1.2rem;
+        border-left: 4px solid #d8000c;
+        font-weight: 500;
+      }
+      footer {
+        background: #2d3e50;
+        color: #fff;
+        padding: 1.2rem 0;
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 3rem;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 -2px 8px rgba(45, 62, 80, 0.06);
+      }
+    </style>
+  </head>
+  <body>
+    <header>Welcome to Feedback Site</header>
+    <nav>
+      <a href="/form">Feedback</a>
+    </nav>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="{{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <main>{% block content %} {% endblock content %}</main>
+    <footer>
+      <p>&copy;2025 All Rights reserved</p>
+    </footer>
+  </body>
+</html>

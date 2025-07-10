@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block title %}Thank you{% endblock title %} {%
+block content %}
+<div
+  style="
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  "
+>
+  <h3 style="color: #2d7ff9; margin-bottom: 16px">Thank you, {{ name }}!</h3>
+  <blockquote
+    style="
+      font-size: 1.1em;
+      color: #444;
+      background: #fff;
+      border-left: 4px solid #2d7ff9;
+      margin: 20px 0;
+      padding: 16px 24px;
+    "
+  >
+    {{ message }}
+  </blockquote>
+  <a
+    href="/"
+    style="
+      display: inline-block;
+      margin-top: 24px;
+      padding: 10px 24px;
+      background: #2d7ff9;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+    "
+  >
+    Go to feedback form
+  </a>
+</div>
+{% endblock content %}
